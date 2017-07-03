@@ -1,0 +1,39 @@
+<div class="animated fadeIn">
+<div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i>Trackers
+        </div>
+        <div class="card-block">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Tracker Id</th>
+                <th>Location</th>
+                <th>Date Registered</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let tracker of trackers">
+                <td>{{tracker.id}}</td>
+                <td>{{tracker.location}}</td>
+                <td>{{tracker.dateRegistered}}</td>
+                <td>
+                  <span *ngIf="tracker.active" class="badge badge-success">Active</span>
+                  <span *ngIf="!tracker.active" class="badge badge-danger">Inactive</span>
+                </td>
+            </tbody>
+          </table>
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </div>
+      </div>
+</div>
